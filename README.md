@@ -77,7 +77,7 @@ This has the following **impacts** on the rest of the script:
 * the pattern to identify mean and sd in variable names to create the MSd_data is "mean\\.\\." and "std\\.\\." instead of "mean\\(\\)" and "std\\(\\)"
 
 ### The summarise_each function
-To create the second data set, it is necessary, after grouping the dataset by SubjectId and Activity, to calculate the mean() for each of the remaining columns. To obtain that which avoiding a complicated loop, the *summarize_each()* function is used. As per description, summarize_each allows to "Apply one or more functions to one or more columns. Grouping variables are always excluded from modification". This is exactly what is needed, as all columns not to be summarized are indeed included in the group-by.
+To create the second data set, it is necessary, after grouping the dataset by SubjectId and Activity, to calculate the mean() for each of the remaining columns. To obtain that, the *summarize_each()* function is used. As per description, summarize_each allows to "Apply one or more functions to one or more columns. Grouping variables are always excluded from modification". This is exactly what is needed, as all columns not to be summarized are indeed included in the group-by.
 
 ## A final word
 Many thanks to those of you who have or will spend time reviewing this assignment, this is highly appreciated.
