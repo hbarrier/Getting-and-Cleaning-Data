@@ -15,7 +15,9 @@ Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012
 
 ## Codebook for the first dataset
 
-**Remark**: 
+The dataset, labelled "MSd_data" contains 10299 observations and 68 variables.  
+
+**Remarks**: 
 * "Jerk" refers to the rate of change of acceleration; that is, the derivative of acceleration with respect to time (https://en.wikipedia.org/wiki/Jerk_(physics) for further info).
 * further information on the Fast Fourier Transform (FFT) can be found here: https://en.wikipedia.org/wiki/Fast_Fourier_transform
 * in the variable names:
@@ -102,13 +104,17 @@ fBodyGyroJerkMag.std|68|Standard deviation magnitude of the Jerk of the Gyroscop
 
 ## Codebook for the second, summarized dataset
 
-This Codebook contains the exact same name of variables as the first one. 
-SubjectId and Activity are the same variables as above, no transformation has been applied.
+This second dataset, *Avg_data* is composed of 180 observations over 68 variables.
+Each observation corresponds to 1 subjectId and 1 activity. The dataset therefore has one observation for each of the 6 activities of the 30 subjects involved in the experiment.
 
-Nevertheless, it should be noticed that for all other variables, the measure available in the summarized dataset is equal to the mean of the same variable in above dataset, for each combination of (SubjectId, Activity). 
+The names and types of the variables are identical to the variables in the first dataset, so please refer to the previous paragraph for full details. 
 
-As per table below, for instance, the first dataset contains 95 measurements for the Walking activity for SubjectId 1. 
-The Avg_data dataset has for each variable for Subject 1 / Walking the mean of those 95 values.
+No transformation has been applied on the SubjectId and Activity variables. They have been used as grouping variables in that second dataset.
+
+Nevertheless, it should be noticed that for all other variables, the measure available in the summarized dataset is equal to the mean of the measures for that same variable in above dataset, per combination of (SubjectId, Activity). 
+
+As per table below, for instance, the first dataset contains 95 observations for the Walking activity for SubjectId 1. 
+The Avg_data dataset therefore contains for (Subject 1, Walking) the mean of those 95 values for each variable.
 
 This table (obtained by running *table(MSd_data$SubjectId, MSd_data$Activity)* in R) provides the number of measures averaged for each subject and activity.
 
