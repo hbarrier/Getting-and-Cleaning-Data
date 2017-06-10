@@ -25,6 +25,7 @@ Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012
   * Gyro refers to Gyroscopic measures
   * Mag refers to Magnitude
 
+Those abbreviations were voluntarily kept to avoid making variable names too long and painful to further manipulate. 
 
 
 Variable Name | Position | Description | Values or Explanations
@@ -109,7 +110,7 @@ Nevertheless, it should be noticed that for all other variables, the measure ava
 As per table below, for instance, the first dataset contains 95 measurements for the Walking activity for SubjectId 1. 
 The Avg_data dataset has for each variable for Subject 1 / Walking the mean of those 95 values.
 
-This table provides the number of measures averaged for each subject and activity.
+This table (obtained by running *table(MSd_data$SubjectId, MSd_data$Activity)* in R) provides the number of measures averaged for each subject and activity.
 
 Subject Id|WALKING|WALKING_UPSTAIRS|WALKING_DOWNSTAIRS|SITTING|STANDING|LAYING
 ----------|-------|----------------|------------------|-------|--------|------
